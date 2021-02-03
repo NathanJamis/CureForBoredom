@@ -1,1 +1,1 @@
-asdfds
+var kanyeUrl = `https://api.kanye.rest`;
