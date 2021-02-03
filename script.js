@@ -16,8 +16,12 @@ function kanyeQuotes() {
         url: kanyeUrl,
         method: "GET"
     }).then(function (response) {
-        
-    });
+        return response.JSON();
+    }).then(function (data) {
+        console.log(data);
+    })
+    
+    $("")
 };
 
 // Joke API function
