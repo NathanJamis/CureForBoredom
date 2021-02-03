@@ -1,0 +1,14 @@
+html {
+    background-image: url(Assets/dark-grey-terrazzo.png);
+}
+.welcome {
+    margin: auto;
+    padding: 30px;
+    margin-top: 15%;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+}
+.control {
+    padding-top: 10px;
+}
