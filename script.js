@@ -10,18 +10,20 @@
 
 // Kanye API function
 function kanyeQuotes() {
-    var kanyeUrl = `https://api.kanye.rest`;  
+    var kanyeUrl = `https://api.kanye.rest?format=text`;  
     
     $.ajax({
         url: kanyeUrl,
         method: "GET"
     }).then(function (response) {
-        return response.JSON();
+        console.log(response);
     }).then(function (data) {
         console.log(data);
-    })
+    });
     
-    $("")
+    // $("")
 };
+
+kanyeQuotes();
 
 // Joke API function
