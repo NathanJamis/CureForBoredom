@@ -17,9 +17,10 @@ function kanyeQuotes() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-    }).then(function (data) {
-        console.log(data);
     });
+    // .then(function (data) {
+    //     console.log(data);
+    // });
     
     // $("")
 };
