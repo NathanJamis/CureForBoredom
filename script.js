@@ -2,7 +2,7 @@
 
 // add event listeners
 
-// runfunction when certain element is clicked
+// run function when certain element is clicked
 
 // google maps API function
 
@@ -17,12 +17,8 @@ function kanyeQuotes() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+
     });
-    // .then(function (data) {
-    //     console.log(data);
-    // });
-    
-    // $("")
 };
 
 kanyeQuotes();
