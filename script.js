@@ -1,15 +1,10 @@
-// select html elements
+// user input field
+$("#userName").on("submit", function (event) {
+    event.preventDefault();
+    $(".input").val("");
+});
 
-// add event listeners
-
-// run function when certain element is clicked
-
-// google maps API function
-
-// NASA API function
-
-// Kanye API function
-// 
+// API function
 $(document).ready(function () {
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
