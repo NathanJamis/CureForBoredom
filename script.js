@@ -13,10 +13,9 @@
 $(document).ready(function () {
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
-        // show quote
-        // let createADiv = document.createElement("div");
         // creating modal to show quote
         $(".modal").addClass("is-active");
+        kanyeQuotes();
     });
     $(".modal-close").click(function () {
         $(".modal").removeClass("is-active");
@@ -38,10 +37,10 @@ $(document).ready(function () {
             // };
         }).then(function (response) {
             console.log(response);
-
+            $(".quote").empty();
+            $(".quote").append(response);
         });
     };
-    kanyeQuotes();
 });
 
 // Joke API function
