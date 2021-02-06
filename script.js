@@ -1,19 +1,32 @@
 $(document).ready(function () {
-// select html elements
+    // select html elements
 
-// add event listeners
+    // add event listeners
 
-// run function when certain element is clicked
+    // run function when certain element is clicked
 
-// google maps API function
+    // google maps API function
 
-// NASA API function
+    // Get Data from NASA API
+    function getNASAData ()  {
+        var NASAURL = "https://api.nasa.gov/planetary/apod?api_key=cTfEOxMXJxJDzjrpL2IhFf1wseJMQ660LAtJwmWy";
+        $.ajax ({
+            url:NASAURL,
+            method: "GET",
+        }).then(function (response) { 
+            console.log(response);
+            showNASA(response);
+        })
+    }
+    $("#NASAbtn").click(function () {
+        getNASAData();
+
+    })
 
 
 
-
-// Kanye API function
-// 
+    // Kanye API function
+    // 
 
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
@@ -46,19 +59,21 @@ $(document).ready(function () {
         });
     };
     kanyeQuotes();
+
+
+    // Joke API function
+    function Jokes() {
+        var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
+        $.ajax({
+            url: JokesUrl,
+            method: "GET"
+        }).then(function (response) {
+            return response.JSON();
+        }).then(function (data) {
+            console.log(data);
+        })
+
+    };
+    Jokes();
+
 });
-
-// Joke API function
-function Jokes() {
-    var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
-    $.ajax({
-        url: JokesUrl,
-        method: "GET"
-    }).then(function (response) {
-        return response.JSON();
-    }).then(function (data) {
-        console.log(data);
-    })
-
-};
-Jokes();
