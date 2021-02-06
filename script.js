@@ -17,6 +17,7 @@ $(document).ready(function () {
         // let createADiv = document.createElement("div");
         // creating modal to show quote
         $(".modal").addClass("is-active");
+        kanyeQuotes();
     });
     $(".modal-close").click(function () {
         $(".modal").removeClass("is-active");
@@ -32,13 +33,14 @@ $(document).ready(function () {
             method: "GET",
             dataType: "text",
             // success: function (data) {
-            //     // if (condition) {
+            //      if (condition) {
 
-            //     // }  
+            //      }  
             // };
         }).then(function (response) {
             console.log(response);
-
+            // $(".quote").empty();
+            $(".quote").append(response);
         });
     };
     kanyeQuotes();
