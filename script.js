@@ -37,6 +37,7 @@ $(document).ready(function () {
             // };
         }).then(function (response) {
             console.log(response);
+            $(".quote").empty();
             $(".quote").append(response);
         });
     };
