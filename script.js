@@ -43,7 +43,6 @@ $(document).ready(function () {
             $(".quote").append(response);
         });
     };
-    kanyeQuotes();
 });
 
 // Joke API function
