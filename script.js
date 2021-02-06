@@ -7,25 +7,32 @@ $(document).ready(function () {
 
     // google maps API function
 
-    // Get Data from NASA API
+    // Get Data from NASA API and display in modal
     function getNASAData() {
         var NASAURL = "https://api.nasa.gov/planetary/apod?api_key=cTfEOxMXJxJDzjrpL2IhFf1wseJMQ660LAtJwmWy";
         $.ajax({
             url: NASAURL,
             method: "GET",
         }).then(function (response) {
+            $(".NASAcontent").empty();
             console.log(response);
-            showNASA(response);
+
+            var image = $("<img src =" + response.hdurl + ">");
+            var explanation = $("<p>").text(response.explanation);
+            $(".NASAcontent").append(image);
+            $(".NASAcontent").append(explanation);
         })
     }
 
+    //Show NASA modal when click NASA button
     $("#NASAbtn").click(function () {
         $(".NASAModal").addClass("is-active");
         getNASAData();
     });
 
-    $(".modal-close").click(function () {
-        $(".modal").removeClass("is-active");
+    //Hide NASA modal when click Restart button
+    $("#NASArestartBtn").click(function () {
+        $(".NASAModal").removeClass("is-active");
     });
 
 
