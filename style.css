@@ -11,9 +11,16 @@ body{
     margin-right: 10%;
     margin-top: 2%;
     border-radius: 50%;
+    border-style: solid;
+    border-color: #6930c3;
+    border-width: 5px;
 }
 .box{
     font-size: 24px;
+    
+}
+.container{
+    margin-top: 30px;
     
 }
 .welcome {
@@ -32,17 +39,15 @@ body{
     background-color: #6930c3;
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-.is-parent {
- flex-wrap: wrap;
+    border-style: outset;
+    border-width: 5px;
 }
 
 .image {
     margin: 15px;
     border-style: outset;
-    border-width: 5px;;
-}
+    border-width: 5px;
+
 
 .is-success {
     margin-left: 30%;
@@ -51,4 +56,8 @@ body{
 .button {
     font-family: 'Lemonada', cursive;
     font-size: 20px;
+    margin-left: 30%;
+}
+.foodimg {
+    height:500px;
 }
