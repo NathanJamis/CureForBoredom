@@ -11,7 +11,6 @@ function pushInput() {
 
 // store username in local storage
 function storeUser() {
-<<<<<<< HEAD
     localStorage.setItem('userInput', JSON.stringify(userInput));  
 };
 
@@ -21,9 +20,6 @@ function getUser() {
     if (storedUser !== null) {
         userInput = storedUser;
     }  
-=======
-    localStorage.setItem
->>>>>>> 48dae203f91cab53da3d650dd6567a13f6709405
 };
 getUser();
 // user input field
