@@ -57,34 +57,22 @@ $(document).ready(function () {
             $(".quote").append(response);
         });
     };
-});
+
 
 // Joke API function
-function Jokes() {
-    var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
-    $.ajax({
-        url: JokesUrl,
-        method: "GET"
-    }).then(function (response) {
-        return response.JSON();
-    }).then(function (data) {
-        console.log(data);
-    })
+// function Jokes() {
+//     var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
+//     $.ajax({
+//         url: JokesUrl,
+//         method: "GET"
+//     }).then(function (response) {
+//         return response.JSON();
+//     }).then(function (data) {
+//         console.log(data);
+//     });
 
 
-    // Joke API function
-    function Jokes() {
-        var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
-        $.ajax({
-            url: JokesUrl,
-            method: "GET"
-        }).then(function (response) {
-            return response.JSON();
-        }).then(function (data) {
-            console.log(data);
-        })
-
-    };
-    Jokes();
+// }
+//     Jokes();
 
 });
