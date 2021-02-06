@@ -13,8 +13,6 @@
 $(document).ready(function () {
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
-        // show quote
-        // let createADiv = document.createElement("div");
         // creating modal to show quote
         $(".modal").addClass("is-active");
         kanyeQuotes();
@@ -39,7 +37,7 @@ $(document).ready(function () {
             // };
         }).then(function (response) {
             console.log(response);
-
+            $(".quote").append(response);
         });
     };
 });
