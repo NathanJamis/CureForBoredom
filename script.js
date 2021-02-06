@@ -8,21 +8,25 @@ $(document).ready(function () {
     // google maps API function
 
     // Get Data from NASA API
-    function getNASAData ()  {
+    function getNASAData() {
         var NASAURL = "https://api.nasa.gov/planetary/apod?api_key=cTfEOxMXJxJDzjrpL2IhFf1wseJMQ660LAtJwmWy";
-        $.ajax ({
-            url:NASAURL,
+        $.ajax({
+            url: NASAURL,
             method: "GET",
-        }).then(function (response) { 
+        }).then(function (response) {
             console.log(response);
             showNASA(response);
         })
     }
+
     $("#NASAbtn").click(function () {
+        $(".NASAModal").addClass("is-active");
         getNASAData();
+    });
 
-    })
-
+    $(".modal-close").click(function () {
+        $(".modal").removeClass("is-active");
+    });
 
 
     // Kanye API function
@@ -60,20 +64,20 @@ $(document).ready(function () {
     };
 
 
-// Joke API function
-// function Jokes() {
-//     var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
-//     $.ajax({
-//         url: JokesUrl,
-//         method: "GET"
-//     }).then(function (response) {
-//         return response.JSON();
-//     }).then(function (data) {
-//         console.log(data);
-//     });
+    // Joke API function
+    // function Jokes() {
+    //     var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
+    //     $.ajax({
+    //         url: JokesUrl,
+    //         method: "GET"
+    //     }).then(function (response) {
+    //         return response.JSON();
+    //     }).then(function (data) {
+    //         console.log(data);
+    //     });
 
 
-// }
-//     Jokes();
+    // }
+    //     Jokes();
 
 });
