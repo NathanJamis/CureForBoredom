@@ -9,19 +9,30 @@
 // NASA API function
 
 // Kanye API function
-function kanyeQuotes() {
-    var kanyeUrl = `https://api.kanye.rest?format=text`;  
-    
-    $.ajax({
-        url: kanyeUrl,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
+// 
+$(document).ready(function () {
+    // $(".kanyeBtn").on("click," function () {
 
-    });
-};
-
-kanyeQuotes();
+    // }); 
+    function kanyeQuotes() {
+        var kanyeUrl = `https://api.kanye.rest?format=text`;  
+        
+        $.ajax({
+            url: kanyeUrl,
+            method: "GET",
+            dataType: "text",
+            // success: function (data) {
+            //     // if (condition) {
+                    
+            //     // }  
+            // };
+        }).then(function (response) {
+            console.log(response);
+            
+        });
+    };
+    kanyeQuotes();
+});
 
 // Joke API function
 function Jokes() {
