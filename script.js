@@ -1,7 +1,7 @@
 // user input field
 $("#userName").on("submit", function (event) {
     event.preventDefault();
-    $(".input").val("");
+    $("#userName").val("");
 });
 
 // API function
