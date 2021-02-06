@@ -11,9 +11,12 @@
 // Kanye API function
 // 
 $(document).ready(function () {
-    // $(".kanyeBtn").on("click," function () {
-
-    // }); 
+    // attach button click event listener to Kanye function
+    $(".kanyeBtn").click(function() {
+        // show quote
+        // let createADiv = document.createElement("div");
+        $('#myModal').modal('show');
+    }); 
     function kanyeQuotes() {
         var kanyeUrl = `https://api.kanye.rest?format=text`;  
         
