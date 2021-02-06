@@ -1,3 +1,7 @@
+// store username in local storage
+function storeUser() {
+    localStorage.setItem  
+};
 // user input field
 $("#userName").on("submit", function (event) {
     event.preventDefault();
