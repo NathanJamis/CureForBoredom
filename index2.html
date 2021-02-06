@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Cure for Boredom</title>
 </head>
@@ -15,7 +15,7 @@
   <!--Header the will eventually insert user's name from the first page-->
   <section class="hero is-primary">
     <div class="hero-body">
-      <p class="title">
+      <p class="title" id="userName">
         Welcome "user name"
       </p>
       <p class="subtitle">
@@ -24,31 +24,47 @@
     </div>
   </section>
   <!--Entertainment Container-->
+  <div class="container">
   <div class="tile is-ancestor">
 
     <!--Jokes-->
     <div class="tile is-parent is-vertical">
-      <div class="tile is-child is-6">
-        <figure class="image">
-          <img src="joke.jpg" alt="Laughing People">
+      <div class="tile is-child">
+        <figure class="image is-5by7">
+          <img src="Assets/joke.jpg" alt="Laughing People">
         </figure>
         <button class="button is-success is-rounded">Make me Laugh</button>
       </div>
 
       <!--NASA-->
-      <div class="tile is-child is-6">
-        <figure class="image">
-          <img src="NASA.jpg" alt="NASA Logo">
+      <div class="tile is-child">
+        <figure class="image is-5by7">
+          <img src="Assets/NASA.jpg" alt="NASA Logo">
         </figure>
-        <button class="button is-success is-rounded">Make me see Space</button>
+        <div class="modal NASAModal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Astronomy Picture of the Day</p>
+            </header>
+            <section class="modal-card-body">
+            <div class="content NASAcontent">         
+            <div> 
+            </section>
+            <footer class="modal-card-foot">         
+              <button class="button is-success is-small" id="NASArestartBtn">Restart</button>
+            </footer>
+          </div>     
+        </div>
+        <button class="button is-success is-rounded" id = "NASAbtn">Make me see Space</button>
       </div>
     </div>
 
     <!--Kanye West-->
-    <div class="tile is-vertical">
-      <div class="tile is-child is-6">
-        <figure class="image">
-          <img src="kanye2.png" alt="Kanye and Taylor">
+    <div class="tile is-parent is-vertical">
+      <div class="tile is-child">
+        <figure class="image is-5by7">
+          <img src="Assets/kanye.jpg" alt="Kanye and Taylor">
         </figure>
         <div id="modal" class="modal">
           <div class="modal-background"></div>
@@ -57,7 +73,7 @@
               <article class="media">
                 <div class="media-left">
                   <figure class="image is-64x64">
-                    <img src="kanye2.png" alt="Image">
+                    <img src="Assets/kanye.jpg" alt="Image">
                   </figure>
                 </div>
                 <div class="media-content">
@@ -79,16 +95,16 @@
       </div>
 
       <!--Recipe-->
-      <div class="tile is-child is-6">
-        <figure class="image">
-          <img src="food.jpg" alt="Gross Food">
+      <div class="tile is-child">
+        <figure class="image is-5by7">
+          <img class="foodimg" src="Assets/food.jpg" alt="Gross Food">
         </figure>
         <button class="button is-success is-rounded">Make me Hungry</button>
       </div>
     </div>
     </div>
     </div>
-
+  </div>
 
     <!--footer will display the restart button which would only be visible on the button pages-->
 
