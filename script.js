@@ -1,10 +1,31 @@
+// global variable for user name
+var userInput = [];
+
+// push user input into userInput array
+function pushInput() {
+    var userName = $("#userName").val();
+    userInput.push(userName);
+    storeUser();
+    getUser();
+};
+
 // store username in local storage
 function storeUser() {
-    localStorage.setItem  
+    localStorage.setItem('userInput', JSON.stringify(userInput));  
 };
+
+// get username from local storage
+function getUser() {
+    var storedUser = JSON.parse(localStorage.getItem("userInput"));
+    if (storedUser !== null) {
+        userInput = storedUser;
+    }  
+};
+getUser();
 // user input field
 $("#userName").on("submit", function (event) {
     event.preventDefault();
+    userInput();
     $("#userName").val("");
 });
 
