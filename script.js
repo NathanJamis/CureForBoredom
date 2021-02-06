@@ -1,3 +1,4 @@
+$(document).ready(function () {
 // select html elements
 
 // add event listeners
@@ -8,9 +9,12 @@
 
 // NASA API function
 
+
+
+
 // Kanye API function
 // 
-$(document).ready(function () {
+
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
         // show quote
