@@ -30,10 +30,9 @@ $(document).ready(function () {
 
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
-        // show quote
-        // let createADiv = document.createElement("div");
         // creating modal to show quote
         $(".modal").addClass("is-active");
+        kanyeQuotes();
     });
     $(".modal-close").click(function () {
         $(".modal").removeClass("is-active");
@@ -55,10 +54,22 @@ $(document).ready(function () {
             // };
         }).then(function (response) {
             console.log(response);
-
+            $(".quote").append(response);
         });
     };
-    kanyeQuotes();
+});
+
+// Joke API function
+function Jokes() {
+    var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
+    $.ajax({
+        url: JokesUrl,
+        method: "GET"
+    }).then(function (response) {
+        return response.JSON();
+    }).then(function (data) {
+        console.log(data);
+    })
 
 
     // Joke API function
