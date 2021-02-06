@@ -1,12 +1,16 @@
 // store username in local storage
-function storeUser() {
-    localStorage.setItem  
-};
+
 // user input field
-$("#userName").on("submit", function (event) {
+$("#userName").on("click", function (event) {
     event.preventDefault();
-    $("#userName").val("");
+    var userName = $("#userName").val();
+    localStorage.setItem("user", JSON.stringify(userName));   
+
 });
+    var getUser = JSON.parse(localStorage.getItem("user"));
+    var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
+    $("#userName").append(welcomeBanner)
+    
 
 // API function
 $(document).ready(function () {
