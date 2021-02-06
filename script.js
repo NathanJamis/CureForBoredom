@@ -17,6 +17,7 @@ $(document).ready(function () {
         // let createADiv = document.createElement("div");
         // creating modal to show quote
         $(".modal").addClass("is-active");
+        kanyeQuotes();
     });
     $(".modal-close").click(function () {
         $(".modal").removeClass("is-active");
@@ -41,7 +42,6 @@ $(document).ready(function () {
 
         });
     };
-    kanyeQuotes();
 });
 
 // Joke API function
