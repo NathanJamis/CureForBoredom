@@ -29,11 +29,6 @@ $(document).ready(function () {
             url: kanyeUrl,
             method: "GET",
             dataType: "text",
-            // success: function (data) {
-            //     // if (condition) {
-
-            //     // }  
-            // };
         }).then(function (response) {
             console.log(response);
             $(".quote").empty();
