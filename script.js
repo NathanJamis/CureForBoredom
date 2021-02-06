@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(".kanyeBtn").click(function() {
         // show quote
         // let createADiv = document.createElement("div");
-        $('#myModal').modal('show');
+        $(".modal").addClass("is-active");
     }); 
     function kanyeQuotes() {
         var kanyeUrl = `https://api.kanye.rest?format=text`;  
