@@ -1,26 +1,15 @@
-// global variable for user name
-var userInput = [];
-
-// push user input into userInput array
-function pushInput() {
-    var userName = $("#userName").val();
-    userInput.push(userName);
-    storeUser();
-    getUser();
-};
-
 // store username in local storage
-function storeUser() {
-    localStorage.setItem('userInput', JSON.stringify(userInput));  
-};
+// user input field
+$("#userName").on("click", function (event) {
+    event.preventDefault();
+    var userName = $("#userName").val();
+    localStorage.setItem("user", JSON.stringify(userName));   
+});
 
-// get username from local storage
-function getUser() {
-    var storedUser = JSON.parse(localStorage.getItem("userInput"));
-    if (storedUser !== null) {
-        userInput = storedUser;
-    }  
-};
+    var getUser = JSON.parse(localStorage.getItem("user"));
+    var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
+    $("#userName").append(welcomeBanner);
+
 getUser();
 // user input field
 $("#userName").on("submit", function (event) {
