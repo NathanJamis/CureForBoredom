@@ -43,7 +43,7 @@
         <figure class="image is-3by2">
           <img src="Assets/NASA.jpg" alt="NASA Logo">
         </figure>
-        <div class="modal NASAModal">
+        <div class="modal" id = "NASAModal">
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
@@ -68,7 +68,7 @@
         <figure class="image is-3by2">
           <img src="Assets/kanye.jpg" alt="Kanye and Taylor">
         </figure>
-        <div id="modal" class="modal">
+        <div id="KanyeModal" class="modal">
           <div class="modal-background"></div>
           <div class="modal-content">
             <div class="box">
@@ -80,17 +80,14 @@
                 </div>
                 <div class="media-content">
                   <div class="content">
-                    <p class="quote">
-                      <strong>Yeezy told me...</strong>
-                      <br>
-                    </p>
+                    <p><strong>Yeezy told me...</strong></p>
+                    <p id="KanyeQuote"></p>
                   </div>
-                  <button class="button is-success is-small" id="restartBtn">Restart</button>
+                  <button class="button is-success is-small" id="KanyeRestartBtn">Restart</button>
                 </div>
               </article>
             </div>
           </div>
-          <button class="modal-close is-large" aria-label="close"></button>
         </div>
         <button class="button is-success is-rounded kanyeBtn">What does Kanye say?</button>
       </div>
