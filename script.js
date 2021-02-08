@@ -83,32 +83,34 @@ $(document).ready(function () {
     Jokes();
     //Panorama API
     //Click to open Panorama Modal
-    $("#travel").click(
-        function initialize() {
-            var Venice = { lat: 45.4759903, lng: 12.5915585 }
-            var Seychelles = { lat: -4.3325215, lng: 55.7870521 }
-            var Boudha = { lat: 27.721378, lng: 85.3619399 }
-            var Seoraksan = { lat: 38.0803894, lng: 128.4360266 }
-            var Mahakai = { lat: 27.0477084, lng: 88.2678402 }
-            var Baikal = { lat: 53.3255194, lng: 107.7484936 }
-            var Tbilisi = { lat: 41.6870833, lng: 44.808745 }
-            var Baalbek = { lat: 34.0045188, lng: 36.2030793 }
-            var Polonnaruwa = { lat: 7.9473986, lng: 81.0013532 }
-            var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai, 
-                Baikal, Tbilisi, Baalbek, Polonnaruwa]
-            randomPlace = locations[Math.floor(Math.random() * locations.length)]
-            panorama = new google.maps.StreetViewPanorama(
-            document.getElementById("streetviewPanorama"),
-            {
-                position:randomPlace,
-                pov: { heading: 0, pitch: 0 },
-                zoom: 1,
-            },
-            )
-        }
-    )
+    $("#travel").click(function () {
+        $(".panoramaModal").addClass("is-active")
+    });
     //Click to close Panorama Modal 
     $("#panoramarestartBtn").click(function () {
         $(".panoramaModal").removeClass("is-active");
     });
+    function initialize() {
+        var Venice = { lat: 45.4759903, lng: 12.5915585 }
+        var Seychelles = { lat: -4.3325215, lng: 55.7870521 }
+        var Boudha = { lat: 27.721378, lng: 85.3619399 }
+        var Seoraksan = { lat: 38.0803894, lng: 128.4360266 }
+        var Mahakai = { lat: 27.0477084, lng: 88.2678402 }
+        var Baikal = { lat: 53.3255194, lng: 107.7484936 }
+        var Tbilisi = { lat: 41.6870833, lng: 44.808745 }
+        var Baalbek = { lat: 34.0045188, lng: 36.2030793 }
+        var Polonnaruwa = { lat: 7.9473986, lng: 81.0013532 }
+        var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai, 
+            Baikal, Tbilisi, Baalbek, Polonnaruwa]
+        randomPlace = locations[Math.floor(Math.random() * locations.length)]
+        panorama = new google.maps.StreetViewPanorama(
+        document.getElementById("streetviewPanorama"),
+        {
+            position:randomPlace,
+            pov: { heading: 0, pitch: 0 },
+            zoom: 1,
+        },
+        )
+    }
+    initialize()
 });
