@@ -32,6 +32,7 @@ $(document).ready(function () {
     $("#restartBtn").click(function () {
         $(".modal").removeClass("is-active");
     });
+    // API function to get the quotes
     function kanyeQuotes() {
         var kanyeUrl = `https://api.kanye.rest?format=text`;
 
