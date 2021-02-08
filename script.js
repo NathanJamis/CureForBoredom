@@ -1,17 +1,17 @@
-// store username in local storage
-// user input field
-$("#userName").on("click", function (event) {
+// Click handler for localStorage and page redirect
+$("#submitBtn").on("click", function (event) {
     event.preventDefault();
     var userName = $("#userName").val();
-    localStorage.setItem("user", JSON.stringify(userName));   
-
+    localStorage.setItem("user", JSON.stringify(userName));
+    document.location.href = "index2.html"
 });
-    var getUser = JSON.parse(localStorage.getItem("user"));
-    var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
-    $("#userName").append(welcomeBanner)
+// Retrieve user name from localStorage and display in hero
+var getUser = JSON.parse(localStorage.getItem("user"));
+var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
+$("#userName").append(welcomeBanner)
     
 
-// API function
+// API functions
 $(document).ready(function () {
     // attach button click event listener to Kanye function
     $(".kanyeBtn").click(function () {
@@ -78,7 +78,6 @@ $(document).ready(function () {
         }).then(function (data) {
             console.log(data);
         });
-
 
     }
     Jokes();
