@@ -82,14 +82,6 @@ $(document).ready(function () {
     }
     Jokes();
     //Panorama API
-    //Click to open Panorama Modal
-    $("#travel").click(function () {
-        $(".panoramaModal").addClass("is-active")
-    });
-    //Click to close Panorama Modal 
-    $("#panoramarestartBtn").click(function () {
-        $(".panoramaModal").removeClass("is-active");
-    });
     function initialize() {
         var Venice = { lat: 45.4759903, lng: 12.5915585 }
         var Seychelles = { lat: -4.3325215, lng: 55.7870521 }
@@ -103,7 +95,7 @@ $(document).ready(function () {
         var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai, 
             Baikal, Tbilisi, Baalbek, Polonnaruwa]
         randomPlace = locations[Math.floor(Math.random() * locations.length)]
-        panorama = new google.maps.StreetViewPanorama(
+        new google.maps.StreetViewPanorama(
         document.getElementById("streetviewPanorama"),
         {
             position:randomPlace,
@@ -111,6 +103,18 @@ $(document).ready(function () {
             zoom: 1,
         },
         )
+        console.log(locations)
+        console.log(randomPlace)
     }
-    initialize()
+    //Click to open Panorama Modal
+    $("#travel").click(function () {
+        $(".panoramaModal").addClass("is-active"),
+        initialize ()
+    });
+    //Click to close Panorama Modal 
+    $("#panoramarestartBtn").click(function () {
+        $(".panoramaModal").removeClass("is-active"),
+        document.getElementById("streetviewPanorama").innerHTML = "";
+    });
+
 });

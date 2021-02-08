@@ -83,7 +83,19 @@ p{
     font-family: 'Molengo', sans-serif;
     font-size: 20px;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(175, 175, 175, 0.898);
+}
+.tile {
+    border-radius: 15px;
+}
 #streetviewPanorama {
     height: 400px;
-    width: 600px;
+    width: 700px;
   }
