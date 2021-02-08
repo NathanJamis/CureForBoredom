@@ -1,33 +1,40 @@
 html {
     background-image: url(Assets/dark-grey-terrazzo.png);
 }
+/*To change the background on the first page*/
 #intro {
     background-image: url(Assets/bordem.jpg);
     background-size: contain;
     background-repeat: round;
 }
+/*Changes the first header on the first page*/
 h1 {
     font-family: 'Miriam Libre', sans-serif;
     font-size: 40px;
     text-shadow: 2px 2px 2px #000;
     color: black;
 }
+/*Changes the description on the first page*/
 p{
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     font-size: 25px;
     color: rgba(175, 175, 175, 0.898);
     
 }
+/*Changes the header on the second page*/
 .title{
     font-family: 'Miriam Libre', sans-serif;
     font-size: 40px;
     text-shadow: 3px 3px 3px black;
+    border-radius: 15px;
 }
+/*Changes the description on the second page*/
 .subtitle {
     font-family: 'Nobile', Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
+/*The header container for the second page*/
 .hero {
     text-align: center;
     margin-left: 20%;
@@ -38,14 +45,16 @@ p{
     border-color: #dedede;
     border-width: 5px;
 }
-.box{
-    font-size: 24px;
-    
-}
+/*Container on the second page*/
 .container{
     margin-top: 30px;
     margin-bottom: 5%;
+    background-color: rgba(175, 175, 175, 0.898);
+    border-style: outset;
+    padding: 20px;
+    border-width: 5px;
 }
+/*Container on the first page*/
 .welcome {
     margin: auto;
     padding: 50px;
@@ -57,28 +66,22 @@ p{
     border-color: #dedede;
     border-width: 5px;
     border-style: solid;
+    font-size: 24px;
 }
+/*Text input on first page*/
 .control {
     padding-top: 10px;
 }
-
-.is-ancestor {
-    background-color: rgba(175, 175, 175, 0.898);
-    border-style: outset;
-    border-width: 5px;
-}
-
 .image {
     margin: 15px;
     border-style: outset;
     border-width: 5px;
     border-radius: 15px;
 }
-
+/*For second page buttons only*/
 .is-success {
     margin-left: 30%;
 }
-
 .button {
     font-family: 'Molengo', sans-serif;
     font-size: 20px;
@@ -91,9 +94,6 @@ p{
     text-align: center;
     padding: 10px;
     background-color: rgba(175, 175, 175, 0.898);
-}
-.tile {
-    border-radius: 15px;
 }
 #streetviewPanorama {
     height: 400px;
