@@ -85,7 +85,6 @@ p{
 .button {
     font-family: 'Molengo', sans-serif;
     font-size: 20px;
-    background-color: rgb(155, 49, 49) !important;
 }
 .footer {
     position: fixed;
@@ -96,3 +95,7 @@ p{
     padding: 10px;
     background-color: rgba(175, 175, 175, 0.898);
 }
+#streetviewPanorama {
+    height: 400px;
+    width: 700px;
+  }
