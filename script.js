@@ -68,19 +68,31 @@ $(document).ready(function () {
     });
 
     //Joke API function
-    function Jokes() {
-        var JokesUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
-        $.ajax({
-            url: JokesUrl,
-            method: "GET"
-        }).then(function (response) {
-            return response.JSON();
-        }).then(function (data) {
-            console.log(data);
-        });
+    //Show joke modal when click Joke button
+     $("#jokeBtn").click(function () {
+        $("#jokeModal").addClass("is-active");
+        //gathers data and displays joke
+        jokes();
+    });
+    //Hide joke modal when click restart button
+    $("#jokeRestartBtn").click(function () {
+        $("#jokeModal").removeClass("is-active");
+    });
+    //Gather data and display joke
+    function jokes() {
+        var jokeUrl = `https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt`;
 
-    }
-    Jokes();
+        $.ajax({
+            url: jokeUrl,
+            method: "GET",
+            dataType: "text",
+        }).then(function (response) {
+            console.log(response);
+            $("#joke").empty();
+            $("#joke").append(response);
+        });
+    };
+    
     //Panorama API
     function initialize() {
         var Venice = { lat: 45.4759903, lng: 12.5915585 }
