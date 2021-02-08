@@ -97,3 +97,7 @@ p{
 .tile {
     border-radius: 15px;
 }
+#streetviewPanorama {
+    height: 400px;
+    width: 600px;
+  }
