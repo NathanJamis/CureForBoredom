@@ -9,22 +9,21 @@ $("#submitBtn").on("click", function (event) {
 var getUser = JSON.parse(localStorage.getItem("user"));
 var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
 $("#userName").append(welcomeBanner)
-    
+
 
 // API functions
 $(document).ready(function () {
-    // attach button click event listener to Kanye function
+    //Kanye API
+    //Show Kanye modal when Kanye button is clicked
     $(".kanyeBtn").click(function () {
-        // creating modal to show quote
-        $(".kanyeModal").addClass("is-active");
+        $("#KanyeModal").addClass("is-active");
         kanyeQuotes();
     });
-    $(".modal-close").click(function () {
-        $(".kanyeModal").removeClass("is-active");
+    //Hide Kanye modal when restart button is clicked
+    $("#KanyeRestartBtn").click(function () {
+        $("#KanyeModal").removeClass("is-active");
     });
-    $("#restartBtn").click(function () {
-        $(".kanyeModal").removeClass("is-active");
-    });
+    //Get data from Kanye API and display in modal
     function kanyeQuotes() {
         var kanyeUrl = `https://api.kanye.rest?format=text`;
 
@@ -34,12 +33,13 @@ $(document).ready(function () {
             dataType: "text",
         }).then(function (response) {
             console.log(response);
-            $(".quote").empty();
-            $(".quote").append(response);
+            $("#KanyeQuote").empty();
+            $("#KanyeQuote").append(response);
         });
     };
 
     //NASA API
+    //Get data from NASA API and display in modal
     function getNASAData() {
         var NASAURL = "https://api.nasa.gov/planetary/apod?api_key=cTfEOxMXJxJDzjrpL2IhFf1wseJMQ660LAtJwmWy";
         $.ajax({
@@ -58,13 +58,13 @@ $(document).ready(function () {
 
     //Show NASA modal when click NASA button
     $("#NASAbtn").click(function () {
-        $(".NASAModal").addClass("is-active");
+        $("#NASAModal").addClass("is-active");
         getNASAData();
     });
 
     //Hide NASA modal when click Restart button
     $("#NASArestartBtn").click(function () {
-        $(".NASAModal").removeClass("is-active");
+        $("#NASAModal").removeClass("is-active");
     });
 
     //Joke API function
