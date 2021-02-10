@@ -142,3 +142,15 @@ $(document).ready(function () {
     });
 
 });
+
+function footerQuotes() {
+    var quotes = [
+        "There are no uninteresting things, only uninterested people. ― G.K. Chesterton",
+        "Is life not a thousand times too short for us to bore ourselves? ― Friedrich Nietzsche",
+        "The cure for boredom is curiosity. There is no cure for curiosity. – Ellen Parr",
+        "The two enemies of human happiness are pain and boredom. – Arthur Schopenhauer",
+        "Without freedom of choice there is no creativity. - Captain James T. Kirk"
+    ];
+    $("#footQuote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+};
+footerQuotes();
