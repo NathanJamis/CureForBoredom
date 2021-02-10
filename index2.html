@@ -37,17 +37,18 @@
         </figure>
         <div class="modal" id="jokeModal">
           <div class="modal-background"></div>
-          <div class="modal-content">
-            <div class="box">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p><strong id = "joke"></strong></p>
-                  </div>
-                  <button class="button is-success is-small" id="jokeRestartBtn">Restart</button>
-                </div>
-              </article>
-            </div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Here's a Joke for you:</p>
+            </header>
+            <section class="modal-card-body">
+              <div class="content">
+                <p id = "joke"></p>
+              </div>
+            </section>
+            <footer class="modal-card-foot">         
+              <button class="button is-success is-small" id="jokeRestartBtn">Restart</button>
+            </footer>
           </div>
         </div>
         <button class="button is-success is-rounded" id="jokeBtn">Make me Laugh!</button>
@@ -62,7 +63,7 @@
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
-              <p class="modal-card-title">Astronomy Picture of the Day</p>
+              <p class="modal-card-title">Astronomy Picture of the Day:</p>
             </header>
             <section class="modal-card-body">
             <div class="content NASAcontent">         
@@ -85,24 +86,19 @@
         </figure>
         <div id="KanyeModal" class="modal">
           <div class="modal-background"></div>
-          <div class="modal-content">
-            <div class="box">
-              <article class="media">
-                <div class="media-left">
-                  <figure class="image is-64x64">
-                    <img src="Assets/kanye.jpg" alt="Image">
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p><strong>Yeezy told me...</strong></p>
-                    <p id="KanyeQuote"></p>
-                  </div>
-                  <button class="button is-success is-small" id="KanyeRestartBtn">Restart</button>
-                </div>
-              </article>
-            </div>
-          </div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Yeezy told me...</p>
+            </header>
+            <section class="modal-card-body">
+              <div class="content">
+                <p id="KanyeQuote"></p>         
+              <div> 
+              </section>
+              <footer class="modal-card-foot">         
+                <button class="button is-success is-small" id="KanyeRestartBtn">Restart</button>
+              </footer>
+            </div>    
         </div>
         <button class="button is-success is-rounded kanyeBtn">What does Kanye say?</button>
       </div>
@@ -116,7 +112,7 @@
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
-              <p class="modal-card-title">An interesting Panorama from Around the World</p>
+              <p class="modal-card-title">An interesting Panorama from Around the World:</p>
             </header>
               <div id="streetviewPanorama"></div>
             <footer class="modal-card-foot">         
