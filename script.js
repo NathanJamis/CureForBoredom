@@ -7,9 +7,14 @@ $("#submitBtn").on("click", function (event) {
 });
 // Retrieve user name from localStorage and display in hero
 var getUser = JSON.parse(localStorage.getItem("user"));
-var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
-$("#userName").append(welcomeBanner)
-
+if (getUser) { 
+    var welcomeBanner = $("<p>").addClass("title").text("Welcome, " + getUser);
+    $("#userName").append(welcomeBanner);
+    
+} else {
+    var welcomeBanner = $("<p>").addClass("title").text("Welcome");
+    $("#userName").append(welcomeBanner);
+}
 
 // API functions
 $(document).ready(function () {
@@ -49,10 +54,17 @@ $(document).ready(function () {
             $(".NASAcontent").empty();
             console.log(response);
 
-            var image = $("<img src =" + response.hdurl + ">");
-            var explanation = $("<p>").text(response.explanation);
-            $(".NASAcontent").append(image);
-            $(".NASAcontent").append(explanation);
+            if (response.media_type == "video") {
+                var video = $("<iframe src =" + response.url + " id=video width=420 height=315 frameborder=0 allowfullscreen><iframe>");
+                var explanation = $("<p>").text(response.explanation);
+                $(".NASAcontent").append(video);
+                $(".NASAcontent").append(explanation);
+            } else {
+                var image = $("<img src =" + response.hdurl + ">");
+                var explanation = $("<p>").text(response.explanation);
+                $(".NASAcontent").append(image);
+                $(".NASAcontent").append(explanation);
+            };
         })
     }
 
@@ -95,38 +107,50 @@ $(document).ready(function () {
 
     //Travel API
     function initialize() {
-        var Venice = { lat: 45.4759903, lng: 12.5915585 }
-        var Seychelles = { lat: -4.3325215, lng: 55.7870521 }
-        var Boudha = { lat: 27.721378, lng: 85.3619399 }
-        var Seoraksan = { lat: 38.0803894, lng: 128.4360266 }
-        var Mahakai = { lat: 27.0477084, lng: 88.2678402 }
-        var Baikal = { lat: 53.3255194, lng: 107.7484936 }
-        var Tbilisi = { lat: 41.6870833, lng: 44.808745 }
-        var Baalbek = { lat: 34.0045188, lng: 36.2030793 }
-        var Polonnaruwa = { lat: 7.9473986, lng: 81.0013532 }
-        var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai,
-            Baikal, Tbilisi, Baalbek, Polonnaruwa]
-        randomPlace = locations[Math.floor(Math.random() * locations.length)]
+        var Venice = { lat: 45.4759903, lng: 12.5915585 };
+        var Seychelles = { lat: -4.3325215, lng: 55.7870521 };
+        var Boudha = { lat: 27.721378, lng: 85.3619399 };
+        var Seoraksan = { lat: 38.0803894, lng: 128.4360266 };
+        var Mahakai = { lat: 27.0477084, lng: 88.2678402 };
+        var Baikal = { lat: 53.3255194, lng: 107.7484936 };
+        var Tbilisi = { lat: 41.6870833, lng: 44.808745 };
+        var Baalbek = { lat: 34.0045188, lng: 36.2030793 };
+        var Polonnaruwa = { lat: 7.9473986, lng: 81.0013532 };
+        var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai, 
+            Baikal, Tbilisi, Baalbek, Polonnaruwa];
+        randomPlace = locations[Math.floor(Math.random() * locations.length)];
         new google.maps.StreetViewPanorama(
-            document.getElementById("streetviewPanorama"),
-            {
-                position: randomPlace,
-                pov: { heading: 0, pitch: 0 },
-                zoom: 1,
-            },
+        document.getElementById("streetviewPanorama"),
+        {
+            position:randomPlace,
+            pov: { heading: 0, pitch: 0 },
+            zoom: 1,
+        }
         )
         console.log(locations)
         console.log(randomPlace)
-    }
+    };
     //Click to open Travel Modal
     $("#travel").click(function () {
-        $(".panoramaModal").addClass("is-active"),
-            initialize()
+        $(".panoramaModal").addClass("is-active");
+        initialize();
     });
     //Click to close Travel Modal 
     $("#panoramarestartBtn").click(function () {
-        $(".panoramaModal").removeClass("is-active"),
-            document.getElementById("streetviewPanorama").innerHTML = "";
+        $(".panoramaModal").removeClass("is-active");
+        document.getElementById("streetviewPanorama").innerHTML = "";
     });
 
 });
+
+function footerQuotes() {
+    var quotes = [
+        "There are no uninteresting things, only uninterested people. ― G.K. Chesterton",
+        "Is life not a thousand times too short for us to bore ourselves? ― Friedrich Nietzsche",
+        "The cure for boredom is curiosity. There is no cure for curiosity. – Ellen Parr",
+        "The two enemies of human happiness are pain and boredom. – Arthur Schopenhauer",
+        "Without freedom of choice there is no creativity. - Captain James T. Kirk"
+    ];
+    $("#footQuote").text(quotes[Math.floor(Math.random() * quotes.length)]);
+};
+footerQuotes();
