@@ -2,131 +2,131 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nobile&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Cure for Boredom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nobile&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Cure for Boredom</title>
 </head>
 
 <body>
+  <!-- Intro Container -->
   <section class="hero is-primary">
     <div class="hero-body">
       <p class="title" id="userName">
       </p>
       <p class="subtitle">
-        <br>This page is designed to intrigue you as a break from this snoregasm called life. 
-        Below are 4 different escapes from reality. You may return to the page by clicking the restart button. 
+        <br>This page is designed to intrigue you as a break from this snoregasm called life.
+        Below are 4 different escapes from reality. You may return to the page by clicking the restart button.
         <br>Choose wisely...
       </p>
     </div>
   </section>
   <!--Entertainment Container-->
   <div class="container">
-  <div class="tile is-ancestor">
+    <div class="tile is-ancestor">
 
-    <!--Jokes-->
-    <div class="tile is-parent is-vertical">
-      <div class="tile is-child">
-        <figure class="image is-5by7">
-          <img src="Assets/joke.jpg" alt="Laughing People">
-        </figure>
-        <div class="modal" id="jokeModal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">Here's a Joke for you:</p>
-            </header>
-            <section class="modal-card-body">
-              <div class="content">
-                <p id = "joke"></p>
-              </div>
-            </section>
-            <footer class="modal-card-foot">         
-              <button class="button is-success is-small" id="jokeRestartBtn">Restart</button>
-            </footer>
-          </div>
-        </div>
-        <button class="button is-success is-rounded" id="jokeBtn">Make me Laugh!</button>
-      </div>
-
-      <!--NASA-->
-      <div class="tile is-child">
-        <figure class="image is-3by2">
-          <img src="Assets/NASA.jpg" alt="NASA Logo">
-        </figure>
-        <div class="modal" id = "NASAModal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">Astronomy Picture of the Day:</p>
-            </header>
-            <section class="modal-card-body">
-            <div class="content NASAcontent">         
-            <div> 
-            </section>
-            <footer class="modal-card-foot">         
-              <button class="button is-success is-small" id="NASArestartBtn">Restart</button>
-            </footer>
-          </div>     
-        </div>
-        <button class="button is-success is-rounded" id = "NASAbtn">Show me the universe!</button>
-      </div>
-    </div>
-
-    <!--Kanye West-->
-    <div class="tile is-parent is-vertical">
-      <div class="tile is-child">
-        <figure class="image is-3by2">
-          <img src="Assets/kanye.jpg" alt="Kanye and Taylor">
-        </figure>
-        <div id="KanyeModal" class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">Yeezy told me...</p>
-            </header>
-            <section class="modal-card-body">
-              <div class="content">
-                <p id="KanyeQuote"></p>         
-              <div> 
+      <!--Jokes-->
+      <div class="tile is-parent is-vertical">
+        <div class="tile is-child">
+          <figure class="image is-5by7">
+            <img src="Assets/joke.jpg" alt="Laughing People">
+          </figure>
+          <div class="modal" id="jokeModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Here's a Joke for you:</p>
+              </header>
+              <section class="modal-card-body">
+                <div class="content">
+                  <p id="joke"></p>
+                </div>
               </section>
-              <footer class="modal-card-foot">         
+              <footer class="modal-card-foot">
+                <button class="button is-success is-small" id="jokeRestartBtn">Restart</button>
+              </footer>
+            </div>
+          </div>
+          <button class="button is-success is-rounded" id="jokeBtn">Make me Laugh!</button>
+        </div>
+
+        <!--NASA-->
+        <div class="tile is-child">
+          <figure class="image is-3by2">
+            <img src="Assets/NASA.jpg" alt="NASA Logo">
+          </figure>
+          <div class="modal" id="NASAModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Astronomy Picture of the Day:</p>
+              </header>
+              <section class="modal-card-body">
+                <div class="content NASAcontent"></div>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success is-small" id="NASArestartBtn">Restart</button>
+              </footer>
+            </div>
+          </div>
+          <button class="button is-success is-rounded" id="NASAbtn">Show me the universe!</button>
+        </div>
+      </div>
+
+      <!--Kanye West-->
+      <div class="tile is-parent is-vertical">
+        <div class="tile is-child">
+          <figure class="image is-3by2">
+            <img src="Assets/kanye.jpg" alt="Kanye and Taylor">
+          </figure>
+          <div id="KanyeModal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Yeezy told me...</p>
+              </header>
+              <section class="modal-card-body">
+                <div class="content">
+                  <p id="KanyeQuote"></p>
+                </div>
+              </section>
+              <footer class="modal-card-foot">
                 <button class="button is-success is-small" id="KanyeRestartBtn">Restart</button>
               </footer>
-            </div>    
-        </div>
-        <button class="button is-success is-rounded kanyeBtn">What does Kanye say?</button>
-      </div>
-
-      <!--Travel-->
-      <div class="tile is-child">
-        <figure class="image is-5by7">
-          <img src="Assets/travel.jpg" alt="Travel">
-        </figure>
-        <div class="panoramaModal modal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">An interesting Panorama from Around the World:</p>
-            </header>
-              <div id="streetviewPanorama"></div>
-            <footer class="modal-card-foot">         
-              <button class="button is-success is-small" id="panoramarestartBtn">Restart</button>
-            </footer>
+            </div>
           </div>
+          <button class="button is-success is-rounded kanyeBtn">What does Kanye say?</button>
         </div>
-        <button class="button is-success is-rounded" id="travel">Show me the world!</button>
+
+        <!--Travel-->
+        <div class="tile is-child">
+          <figure class="image is-5by7">
+            <img src="Assets/travel.jpg" alt="Travel">
+          </figure>
+          <div class="panoramaModal modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">An interesting Panorama from Around the World:</p>
+              </header>
+              <div id="streetviewPanorama"></div>
+              <footer class="modal-card-foot">
+                <button class="button is-success is-small" id="panoramarestartBtn">Restart</button>
+              </footer>
+            </div>
+          </div>
+          <button class="button is-success is-rounded" id="travel">Show me the world!</button>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="content">
       <h4 id="footQuote">
@@ -134,14 +134,15 @@
       </h4>
     </div>
   </footer>
-  <!-- Panorama API -->
+
+  <!-- Script Links -->
   <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUNNcpWI0jZ_chAP5iE79oVkfi3kgQgB0&callback=initialize&libraries=&v=weekly"
-  async
-  ></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUNNcpWI0jZ_chAP5iE79oVkfi3kgQgB0&callback=initialize&libraries=&v=weekly"
+    async></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 
 </body>
+
 </html>

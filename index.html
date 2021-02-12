@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html id="intro">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cure For Boredom</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nobile&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="box welcome">
-      <h1>Cure for Boredom</h1>
-      <p>We're here to distract you from the global pandemic of boredom. We offer you <strong>endless</strong> hours of personalized entertainment. <br> Welcome to your escape.
-      </p>
-      <div class="control">
-        <!-- Store user name to localStorage -->
-        <input class="input is-focused" id="userName" type="text" placeholder="Your name here...">
-      </div>  
+<html lang="en-US" id="intro">
 
-      <br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cure For Boredom</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nobile&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Intro box -->
+  <div class="box welcome">
+    <h1>Cure for Boredom</h1>
+    <p>We're here to distract you from the global pandemic of boredom. We offer you <strong>endless</strong> hours of
+      personalized entertainment. <br> Welcome to your escape.
+    </p>
+    <div class="control">
+      <!-- Store user name to localStorage -->
+      <input class="input is-focused" id="userName" type="text" placeholder="Your name here...">
+    </div>
+
+    <br>
     <!-- This button navigates to media page -->
-      <button class="button is-primary is-rounded" id="submitBtn" type="submit">Take me away!</button>
-    </div>   
+    <button class="button is-primary is-rounded" id="submitBtn" type="submit">Take me away!</button>
+  </div>
 
-    <footer class="footer">
-      <div class="content">
-        <h4 id="footQuote">
-          "Without freedom of choice there is no creativity." -- <strong>Captain James T. Kirk</strong>
-        </h4>
-      </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content">
+      <h4 id="footQuote">
+        "Without freedom of choice there is no creativity." -- <strong>Captain James T. Kirk</strong>
+      </h4>
+    </div>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  <!-- Script Links -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  
-  </body>
+  <script src="script.js"></script>
+
+</body>
+
 </html>

@@ -69,7 +69,7 @@ $(document).ready(function () {
 
     //Joke API function
     //Show joke modal when click Joke button
-     $("#jokeBtn").click(function () {
+    $("#jokeBtn").click(function () {
         $("#jokeModal").addClass("is-active");
         //gathers data and displays joke
         jokes();
@@ -92,8 +92,8 @@ $(document).ready(function () {
             $("#joke").append(response);
         });
     };
-    
-    //Panorama API
+
+    //Travel API
     function initialize() {
         var Venice = { lat: 45.4759903, lng: 12.5915585 }
         var Seychelles = { lat: -4.3325215, lng: 55.7870521 }
@@ -104,29 +104,29 @@ $(document).ready(function () {
         var Tbilisi = { lat: 41.6870833, lng: 44.808745 }
         var Baalbek = { lat: 34.0045188, lng: 36.2030793 }
         var Polonnaruwa = { lat: 7.9473986, lng: 81.0013532 }
-        var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai, 
+        var locations = [Venice, Seychelles, Boudha, Seoraksan, Mahakai,
             Baikal, Tbilisi, Baalbek, Polonnaruwa]
         randomPlace = locations[Math.floor(Math.random() * locations.length)]
         new google.maps.StreetViewPanorama(
-        document.getElementById("streetviewPanorama"),
-        {
-            position:randomPlace,
-            pov: { heading: 0, pitch: 0 },
-            zoom: 1,
-        },
+            document.getElementById("streetviewPanorama"),
+            {
+                position: randomPlace,
+                pov: { heading: 0, pitch: 0 },
+                zoom: 1,
+            },
         )
         console.log(locations)
         console.log(randomPlace)
     }
-    //Click to open Panorama Modal
+    //Click to open Travel Modal
     $("#travel").click(function () {
         $(".panoramaModal").addClass("is-active"),
-        initialize ()
+            initialize()
     });
-    //Click to close Panorama Modal 
+    //Click to close Travel Modal 
     $("#panoramarestartBtn").click(function () {
         $(".panoramaModal").removeClass("is-active"),
-        document.getElementById("streetviewPanorama").innerHTML = "";
+            document.getElementById("streetviewPanorama").innerHTML = "";
     });
 
 });
